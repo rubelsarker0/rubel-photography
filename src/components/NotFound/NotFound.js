@@ -14,11 +14,12 @@ const NotFound = () => {
 		<Container>
 			<div className="text-center py-5 mt-4">
 				<img className="w-100" src={notFoundImg} alt="not found! 404 error" />
-				<h1 className="error-text-color pt-3">Ops!! Page Not Found!</h1>
+				<h1 className="generic-text-color py-3">Ops!! Page Not Found!</h1>
 				<Button
 					onClick={handlePreviousPage}
-					variant="outline-danger"
-					className="generic-bg-color rounded-pill px-5 fw-bold 5 mt-3 text-uppercase"
+					variant="warning"
+					className="rounded-pill px-5 generic-bg-color text-uppercase generic-text-color"
+					size="lg"
 				>
 					Go back
 				</Button>
