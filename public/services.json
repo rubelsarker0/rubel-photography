@@ -1,0 +1,35 @@
+[
+	{
+		"id": 1,
+		"serviceImg": "https://promo-theme.com/sansara/wp-content/uploads/2018/06/price-list1.jpg",
+		"serviceName": "Minimal",
+		"price": 79,
+		"serviceDsc": {
+			"photoQuantity": 15,
+			"location": "1 location",
+			"fileType": "Digital files included"
+		}
+	},
+	{
+		"id": 2,
+		"serviceImg": "https://promo-theme.com/sansara/wp-content/uploads/2018/06/price-list2.jpg",
+		"serviceName": "Standard",
+		"price": 99,
+		"serviceDsc": {
+			"photoQuantity": 30,
+			"location": "1-2 nearby location",
+			"fileType": "Digital files included"
+		}
+	},
+	{
+		"id": 3,
+		"serviceImg": "https://promo-theme.com/sansara/wp-content/uploads/2018/06/price-list3.jpg",
+		"serviceName": "Premium",
+		"price": 129,
+		"serviceDsc": {
+			"photoQuantity": 45,
+			"location": "Multiple location",
+			"fileType": "Digital files included"
+		}
+	}
+]

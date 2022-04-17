@@ -9,8 +9,8 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
 }
 
 .generic-text-color {
@@ -23,4 +23,7 @@ code {
 
 .text-align-justify {
 	text-align: justify;
+}
+.error-text-color {
+	color: #eb130c;
 }
