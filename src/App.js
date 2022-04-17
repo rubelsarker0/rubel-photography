@@ -1,10 +1,10 @@
 import './App.css';
-import { Button } from 'react-bootstrap';
+import Header from './components/Shared/Header/Header';
 
 function App() {
 	return (
 		<div className="App">
-			<Button variant="primary">Submit</Button>
+			<Header></Header>
 		</div>
 	);
 }
