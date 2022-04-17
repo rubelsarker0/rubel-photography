@@ -6,7 +6,13 @@ import './Header.css';
 
 const Header = () => {
 	return (
-		<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
+		<Navbar
+			collapseOnSelect
+			expand="lg"
+			bg="generic-bg-color"
+			variant="dark"
+			sticky="top"
+		>
 			<Container>
 				<Navbar.Brand as={Link} to="/">
 					<img

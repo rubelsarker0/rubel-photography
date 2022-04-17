@@ -4,6 +4,8 @@
 body {
 	margin: 0;
 	font-family: 'Spectral', serif;
+	background-color: #070707;
+	color: #ffffff;
 }
 
 code {
@@ -16,7 +18,7 @@ code {
 }
 
 .generic-bg-color {
-	background-color: #ebb85e !important;
+	background-color: #070707 !important;
 }
 
 .text-align-justify {
