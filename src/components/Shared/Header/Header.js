@@ -22,9 +22,9 @@ const Header = () => {
 						<Nav.Link
 							className="generic-text-color text-uppercase hover-color"
 							as={Link}
-							to="services"
+							to="home"
 						>
-							Services
+							Home
 						</Nav.Link>
 						<Nav.Link
 							className="generic-text-color text-uppercase hover-color"
