@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Rubel Photography
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_My mission is very clear - I want to provide the highest standard and best quality of photography experience to my clients._
 
-## Available Scripts
+# Our key focus
 
-In the project directory, you can run:
+- [x] Our Place: Rubel Photography. Conveniently located in the newly built Cork city center located off Opera lane in Cork.
+- [x] Mission: My mission is very clear - I want to provide the highest standard of photography experience to my clients.
+- [x] Passion I love working in photography industry it's not only my work it's a passion for me. I am excited about online portfolio where my clients can directly engage with me for their desire services.
+- [x] I Understand your needs: I individualise clients care at every step. I will provide up to date information about your photo shoot.
+- [x] I care about my clients: I work hard to deliver high quality photography experience to all of my clients.
 
-### `npm start`
+## Technology stack used in this application
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [x] JavaScript
+- [x] React
+- [x] Bootstrap
+- [x] Font-awesome
+- [x] React-Router-dom
+- [x] Firebase
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## To run this application you need follow below steps
 
-### `npm test`
+> Clone the application from github using this link:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [x] https://github.com/programming-hero-web-course-4/independent-service-provider-rubelsarker0
 
-### `npm run build`
+# Site live url:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [x] https://rubel-photography/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> From the project directory run: -
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [x] npm install.
+  > Once the node_modules installed -
+- [x] run: npm start to start the application
