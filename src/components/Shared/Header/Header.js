@@ -1,10 +1,17 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../../assets/images/logo.png';
 import './Header.css';
 
 const Header = () => {
+	const navigate = useNavigate();
+
+	const handleSignIn = () => {
+		navigate('/signin');
+	};
 	return (
 		<Navbar
 			collapseOnSelect
@@ -61,6 +68,28 @@ const Header = () => {
 							Checkout
 						</Nav.Link>
 					</Nav>
+
+					{/* <div className="d-flex align-items- justify-content-end">
+						{user ? (
+							<Button
+								className="btn-login rounded-pill px-5 fw-bold"
+								onClick={logOut}
+							>
+								Sign Out
+							</Button>
+						) : (
+							<Button
+								onClick={handleSignIn}
+								className="btn-login rounded-pill px-5 fw-bold"
+							>
+								<FontAwesomeIcon
+									className="fa-1x me-3 text-white"
+									icon={faLock}
+								/>
+								Sign In
+							</Button>
+						)}
+					</div> */}
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>
