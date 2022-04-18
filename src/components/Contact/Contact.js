@@ -5,9 +5,13 @@ import ContactInfo from './ContactInfo/ContactInfo';
 
 const Contact = () => {
 	return (
-		<section className="py-5">
+		<section className="py-5 page-height">
 			<Container>
-				<Row lg={2} xs={1} className="g-4">
+				<Row
+					lg={2}
+					xs={1}
+					className="g-4 justify-content-center align-items-center mx-auto"
+				>
 					<ContactInfo />
 					<ContactForm />
 				</Row>

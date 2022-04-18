@@ -5,9 +5,9 @@ const ContactForm = () => {
 	return (
 		<Col>
 			<div className="rounded rounded-3 shadow-lg generic-bg-color p-3 py-5 p-lg-4 py-xl-5">
-				<h2 className="generic-text-color mb-3 text-center text-uppercase">
-					Send us a message
-				</h2>
+				<h1 className=" fw-bold mb-3 text-center text-uppercase">
+					Send your query
+				</h1>
 				<Form>
 					<Form.Group className="mb-3" controlId="Name">
 						<Form.Label className="text-white">Name</Form.Label>
