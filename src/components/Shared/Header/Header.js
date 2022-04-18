@@ -100,6 +100,23 @@ const Header = () => {
 							</Button>
 						)}
 					</div>
+					{user && (
+						<div className="d-flex align-items-center ms-3 mt-1">
+							<h5 className="fw-bold text-secondary me-3">
+								{user.displayName}
+							</h5>
+							<img
+								width="50px"
+								className="rounded-circle"
+								src={
+									user.photoURL
+										? user.photoURL
+										: 'https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png'
+								}
+								alt=""
+							/>
+						</div>
+					)}
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>

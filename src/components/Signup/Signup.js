@@ -20,10 +20,6 @@ const Signup = () => {
 		createUserWithEmailAndPassword(email, password);
 	};
 
-	const googleSignIn = () => {};
-
-	const gitHubSignIn = () => {};
-
 	if (user) {
 		navigate('/home');
 	}
@@ -106,7 +102,7 @@ const Signup = () => {
 							<Row lg={2} xs={1} className="g-3">
 								<Col>
 									<Button
-										onClick={googleSignIn}
+										// onClick={googleSignIn}
 										variant="secondary"
 										className="w-100 text-white fw-bold"
 									>
@@ -119,7 +115,7 @@ const Signup = () => {
 								</Col>
 								<Col>
 									<Button
-										onClick={gitHubSignIn}
+										// onClick={gitHubSignIn}
 										variant="secondary"
 										className="w-100 fw-bold"
 									>

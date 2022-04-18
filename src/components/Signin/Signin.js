@@ -7,6 +7,7 @@ import logo from '../../assets/images/logo.png';
 import './Signin.css';
 import {
 	useSignInWithEmailAndPassword,
+	useSignInWithGithub,
 	useSignInWithGoogle,
 } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/firebase.init';
@@ -22,13 +23,15 @@ const Signin = () => {
 		useSignInWithEmailAndPassword(auth);
 	const [signInWithGoogle, googleUser, googleLoading, googleError] =
 		useSignInWithGoogle(auth);
+	const [signInWithGithub, githubUser, githubLoading, githubError] =
+		useSignInWithGithub(auth);
 
 	const handleEmailSignIn = (event) => {
 		event.preventDefault();
 		signInWithEmailAndPassword(email, password);
 	};
 
-	if (error || googleError) {
+	if (error || googleError || githubError) {
 		errorMsg = (
 			<p className="fs-5 text-center error-text-color error-bg-color text-uppercase pt-3">
 				please allow to login
@@ -36,7 +39,7 @@ const Signin = () => {
 		);
 	}
 
-	if (user || googleUser) {
+	if (user || googleUser || githubUser) {
 		navigate(from, { replace: true });
 	}
 	return (
@@ -107,7 +110,7 @@ const Signin = () => {
 								</Col>
 								<Col>
 									<Button
-										// onClick={gitHubSignIn}
+										onClick={() => signInWithGithub()}
 										variant="secondary"
 										className="w-100 fw-bold"
 									>
