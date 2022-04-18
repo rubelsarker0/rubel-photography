@@ -17,6 +17,10 @@ code {
 	color: #ebb85e !important;
 }
 
+.generic-btn-color {
+	background-color: #ebb85e !important;
+}
+
 .generic-bg-color {
 	background-color: #070707 !important;
 }
@@ -30,4 +34,8 @@ code {
 }
 .error-text-color {
 	color: #eb130c;
+}
+
+.page-height {
+	min-height: 60vh;
 }
