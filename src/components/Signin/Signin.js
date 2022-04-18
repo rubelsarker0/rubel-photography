@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import './Signin.css';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -11,8 +11,9 @@ import auth from '../../Firebase/firebase.init';
 const Signin = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	// const [error, setError] = useState('');
 	const navigate = useNavigate();
+	const location = useLocation();
+	let from = location.state?.from?.pathname || '/';
 	const [signInWithEmailAndPassword, user, loading, error] =
 		useSignInWithEmailAndPassword(auth);
 
@@ -26,7 +27,7 @@ const Signin = () => {
 	const gitHubSignIn = () => {};
 
 	if (user) {
-		navigate('/home');
+		navigate(from, { replace: true });
 	}
 	return (
 		<section
