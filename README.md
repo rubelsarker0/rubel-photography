@@ -27,7 +27,7 @@ _My mission is very clear - I want to provide the highest standard and best qual
 
 # Site live url:
 
-- [x] https://rubel-photography/
+- [x] https://rubel-photography.web.app
 
 > From the project directory run: -
 
