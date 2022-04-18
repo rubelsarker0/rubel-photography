@@ -1,11 +1,21 @@
 import React from 'react';
+import { Container, Row } from 'react-bootstrap';
+import Appointment from './Appointment/Appointment';
+import ContactDetails from './ContactDetails/ContactDetails';
 import './Footer.css';
+import ProjectDsc from './ProjectDsc/ProjectDsc';
 
 const Footer = () => {
 	return (
-		<div>
-			<h1>From footer</h1>
-		</div>
+		<footer className="footer-bg text-white py-5">
+			<Container>
+				<Row lg={3} xs={1} className="g-5">
+					<ProjectDsc />
+					<ContactDetails />
+					<Appointment />
+				</Row>
+			</Container>
+		</footer>
 	);
 };
 

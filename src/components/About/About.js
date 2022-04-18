@@ -8,7 +8,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { Col, Container, Row } from 'react-bootstrap';
 import aboutImage from '../../assets/images/about_me.jpg';
-import './About.css';
 
 const About = () => {
 	return (
