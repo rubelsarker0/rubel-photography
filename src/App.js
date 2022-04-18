@@ -7,6 +7,7 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Checkout from './components/Checkout/Checkout';
 import NotFound from './components/NotFound/NotFound';
+import './App.css';
 
 function App() {
 	return (
