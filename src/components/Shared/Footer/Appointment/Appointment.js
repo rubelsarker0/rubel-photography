@@ -15,7 +15,7 @@ const Appointment = () => {
 				/>
 				<div>
 					<h5>Call Us </h5>
-					<h5>(+051) 424 4962</h5>
+					<h5>(+051) 697 853</h5>
 				</div>
 			</div>
 			<p className="text-white mt-4">

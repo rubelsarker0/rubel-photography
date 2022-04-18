@@ -7,7 +7,7 @@ import ProjectDsc from './ProjectDsc/ProjectDsc';
 
 const Footer = () => {
 	return (
-		<footer className="footer-bg text-white py-5">
+		<footer className="footer-bg text-white pt-5">
 			<Container>
 				<Row lg={3} xs={1} className="g-5">
 					<ProjectDsc />

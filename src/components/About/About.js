@@ -11,7 +11,7 @@ import aboutImage from '../../assets/images/about_me.jpg';
 
 const About = () => {
 	return (
-		<section className="generic-bg-color py-5 about-section">
+		<section className="generic-bg-color py-5 about-section mt-5">
 			<Container>
 				<Row lg={2} xs={1} className="g-2">
 					<Col md={{ order: 'first' }} lg={{ order: 'first' }}>
