@@ -1,22 +1,32 @@
 import React, { useState } from 'react';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { Col, Button, Container, Form, Row } from 'react-bootstrap';
 import logo from '../../assets/images/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../Firebase/firebase.init';
 
 const Signup = () => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const navigate = useNavigate();
+	const [createUserWithEmailAndPassword, user, loading, error] =
+		useCreateUserWithEmailAndPassword(auth);
 
 	const handleEmailRegistration = (e) => {
 		e.preventDefault();
+		createUserWithEmailAndPassword(email, password);
 	};
 
 	const googleSignIn = () => {};
 
 	const gitHubSignIn = () => {};
+
+	if (user) {
+		navigate('/home');
+	}
 	return (
 		<section
 			style={{ minHeight: '650px' }}

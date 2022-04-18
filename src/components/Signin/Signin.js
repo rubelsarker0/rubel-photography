@@ -2,22 +2,32 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import './Signin.css';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../Firebase/firebase.init';
 
 const Signin = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	const [error, setError] = useState('');
+	// const [error, setError] = useState('');
+	const navigate = useNavigate();
+	const [signInWithEmailAndPassword, user, loading, error] =
+		useSignInWithEmailAndPassword(auth);
 
 	const handleEmailSignIn = (event) => {
 		event.preventDefault();
+		signInWithEmailAndPassword(email, password);
 	};
 
 	const googleSignIn = () => {};
 
 	const gitHubSignIn = () => {};
+
+	if (user) {
+		navigate('/home');
+	}
 	return (
 		<section
 			style={{ minHeight: '650px' }}
