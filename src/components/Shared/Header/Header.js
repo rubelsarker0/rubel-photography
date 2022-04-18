@@ -69,10 +69,24 @@ const Header = () => {
 						</Nav.Link>
 					</Nav>
 
+					<div className="d-flex align-items- justify-content-end ps-3">
+						<Button
+							onClick={handleSignIn}
+							variant="warning"
+							className="rounded-pill px-4 generic-bg-color text-uppercase generic-text-color fw-bold"
+						>
+							<FontAwesomeIcon
+								className="fa-1x me-3 generic-text-color"
+								icon={faLock}
+							/>
+							Sign In
+						</Button>
+					</div>
 					{/* <div className="d-flex align-items- justify-content-end">
 						{user ? (
 							<Button
-								className="btn-login rounded-pill px-5 fw-bold"
+								variant="warning"
+								className="rounded-pill px-4 generic-bg-color text-uppercase generic-text-color fw-bold"
 								onClick={logOut}
 							>
 								Sign Out
@@ -83,7 +97,8 @@ const Header = () => {
 								className="btn-login rounded-pill px-5 fw-bold"
 							>
 								<FontAwesomeIcon
-									className="fa-1x me-3 text-white"
+									variant="warning"
+									className="rounded-pill px-4 generic-bg-color text-uppercase generic-text-color fw-bold"
 									icon={faLock}
 								/>
 								Sign In
