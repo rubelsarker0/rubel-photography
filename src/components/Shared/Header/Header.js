@@ -5,12 +5,20 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../../assets/images/logo.png';
 import './Header.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../Firebase/firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
+	const [user] = useAuthState(auth);
 	const navigate = useNavigate();
 
 	const handleSignIn = () => {
 		navigate('/signin');
+	};
+
+	const handleSignOut = () => {
+		signOut(auth);
 	};
 	return (
 		<Navbar
@@ -68,43 +76,30 @@ const Header = () => {
 							Checkout
 						</Nav.Link>
 					</Nav>
-
-					<div className="d-flex align-items- justify-content-end ps-3">
-						<Button
-							onClick={handleSignIn}
-							variant="warning"
-							className="rounded-pill px-4 generic-bg-color text-uppercase generic-text-color fw-bold"
-						>
-							<FontAwesomeIcon
-								className="fa-1x me-3 generic-text-color"
-								icon={faLock}
-							/>
-							Sign In
-						</Button>
-					</div>
-					{/* <div className="d-flex align-items- justify-content-end">
+					<div className="d-flex align-items- justify-content-end">
 						{user ? (
 							<Button
 								variant="warning"
-								className="rounded-pill px-4 generic-bg-color text-uppercase generic-text-color fw-bold"
-								onClick={logOut}
+								className="rounded-pill px-4 generic-bg-color text-uppercase generic-text-color fw-bold ms-3"
+								onClick={handleSignOut}
 							>
 								Sign Out
 							</Button>
 						) : (
 							<Button
 								onClick={handleSignIn}
-								className="btn-login rounded-pill px-5 fw-bold"
+								variant="warning"
+								className="rounded-pill px-4 generic-bg-color text-uppercase generic-text-color fw-bold ms-3"
 							>
 								<FontAwesomeIcon
 									variant="warning"
-									className="rounded-pill px-4 generic-bg-color text-uppercase generic-text-color fw-bold"
+									className="fa-1x generic-text-color me-2"
 									icon={faLock}
 								/>
 								Sign In
 							</Button>
 						)}
-					</div> */}
+					</div>
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>
