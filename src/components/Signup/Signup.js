@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import {
+	useCreateUserWithEmailAndPassword,
+	useSignInWithGithub,
+	useSignInWithGoogle,
+} from 'react-firebase-hooks/auth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { Col, Button, Container, Form, Row } from 'react-bootstrap';
@@ -14,13 +18,17 @@ const Signup = () => {
 	const navigate = useNavigate();
 	const [createUserWithEmailAndPassword, user, loading, error] =
 		useCreateUserWithEmailAndPassword(auth);
+	const [signInWithGoogle, googleUser, googleLoading, googleError] =
+		useSignInWithGoogle(auth);
+	const [signInWithGithub, githubUser, githubLoading, githubError] =
+		useSignInWithGithub(auth);
 
 	const handleEmailRegistration = (e) => {
 		e.preventDefault();
 		createUserWithEmailAndPassword(email, password);
 	};
 
-	if (user) {
+	if (user || googleUser || githubUser) {
 		navigate('/home');
 	}
 	return (
@@ -102,7 +110,7 @@ const Signup = () => {
 							<Row lg={2} xs={1} className="g-3">
 								<Col>
 									<Button
-										// onClick={googleSignIn}
+										onClick={() => signInWithGoogle()}
 										variant="secondary"
 										className="w-100 text-white fw-bold"
 									>
@@ -115,7 +123,7 @@ const Signup = () => {
 								</Col>
 								<Col>
 									<Button
-										// onClick={gitHubSignIn}
+										onClick={() => signInWithGithub()}
 										variant="secondary"
 										className="w-100 fw-bold"
 									>
