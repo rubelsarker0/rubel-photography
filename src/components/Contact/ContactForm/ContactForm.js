@@ -29,7 +29,7 @@ const ContactForm = () => {
 					</Form.Group>
 
 					<Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-						<Form.Label>Example textarea</Form.Label>
+						<Form.Label>Your question</Form.Label>
 						<Form.Control className="generic-bg-color" as="textarea" rows={3} />
 					</Form.Group>
 					<Button
