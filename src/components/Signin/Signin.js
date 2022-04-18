@@ -5,7 +5,10 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import './Signin.css';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import {
+	useSignInWithEmailAndPassword,
+	useSignInWithGoogle,
+} from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/firebase.init';
 
 const Signin = () => {
@@ -13,20 +16,27 @@ const Signin = () => {
 	const [password, setPassword] = useState('');
 	const navigate = useNavigate();
 	const location = useLocation();
+	let errorMsg;
 	let from = location.state?.from?.pathname || '/';
 	const [signInWithEmailAndPassword, user, loading, error] =
 		useSignInWithEmailAndPassword(auth);
+	const [signInWithGoogle, googleUser, googleLoading, googleError] =
+		useSignInWithGoogle(auth);
 
 	const handleEmailSignIn = (event) => {
 		event.preventDefault();
 		signInWithEmailAndPassword(email, password);
 	};
 
-	const googleSignIn = () => {};
+	if (error || googleError) {
+		errorMsg = (
+			<p className="fs-5 text-center error-text-color error-bg-color text-uppercase pt-3">
+				please allow to login
+			</p>
+		);
+	}
 
-	const gitHubSignIn = () => {};
-
-	if (user) {
+	if (user || googleUser) {
 		navigate(from, { replace: true });
 	}
 	return (
@@ -77,13 +87,14 @@ const Signin = () => {
 									Sign In
 								</Button>
 							</Form>
+							{errorMsg}
 							<div className="divider text-center my-3 fs-5">
 								<span className="divider-content">Or</span>
 							</div>
 							<Row lg={2} xs={1} className="g-3">
 								<Col>
 									<Button
-										onClick={googleSignIn}
+										onClick={() => signInWithGoogle()}
 										variant="secondary"
 										className="w-100 text-white fw-bold"
 									>
@@ -96,7 +107,7 @@ const Signin = () => {
 								</Col>
 								<Col>
 									<Button
-										onClick={gitHubSignIn}
+										// onClick={gitHubSignIn}
 										variant="secondary"
 										className="w-100 fw-bold"
 									>
