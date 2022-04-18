@@ -17,7 +17,6 @@ const Signin = () => {
 	const [password, setPassword] = useState('');
 	const navigate = useNavigate();
 	const location = useLocation();
-	let errorMsg;
 	let from = location.state?.from?.pathname || '/';
 	const [signInWithEmailAndPassword, user, loading, error] =
 		useSignInWithEmailAndPassword(auth);
@@ -25,9 +24,11 @@ const Signin = () => {
 		useSignInWithGoogle(auth);
 	const [signInWithGithub, githubUser, githubLoading, githubError] =
 		useSignInWithGithub(auth);
+	let errorMsg;
 
 	const handleEmailSignIn = (event) => {
 		event.preventDefault();
+
 		signInWithEmailAndPassword(email, password);
 	};
 

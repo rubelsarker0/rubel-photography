@@ -107,7 +107,7 @@ const Header = () => {
 							</h5>
 							<img
 								width="50px"
-								className="rounded-circle"
+								className="rounded-circle bg-info"
 								src={
 									user.photoURL
 										? user.photoURL

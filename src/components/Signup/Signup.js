@@ -3,6 +3,7 @@ import {
 	useCreateUserWithEmailAndPassword,
 	useSignInWithGithub,
 	useSignInWithGoogle,
+	useUpdateProfile,
 } from 'react-firebase-hooks/auth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
@@ -23,14 +24,15 @@ const Signup = () => {
 	const [signInWithGithub, githubUser, githubLoading, githubError] =
 		useSignInWithGithub(auth);
 
-	const handleEmailRegistration = (e) => {
+	const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+	const handleEmailRegistration = async (e) => {
 		e.preventDefault();
-		createUserWithEmailAndPassword(email, password);
+		await createUserWithEmailAndPassword(email, password);
+		await updateProfile({ displayName: name });
+		navigate('/home');
 	};
 
-	if (user || googleUser || githubUser) {
-		navigate('/home');
-	}
 	return (
 		<section
 			style={{ minHeight: '650px' }}
@@ -57,11 +59,6 @@ const Signup = () => {
 										placeholder="Enter Your Name"
 										required
 									/>
-									{/* {error.name && (
-										<Form.Text id="formName" className="text-danger">
-											{error.name}
-										</Form.Text>
-									)} */}
 								</Form.Group>
 								<Form.Group className="mb-3" controlId="formBasicEmail">
 									<Form.Label>Email address</Form.Label>
@@ -71,11 +68,6 @@ const Signup = () => {
 										placeholder="Enter email"
 										required
 									/>
-									{/* {error.email && (
-										<Form.Text id="formName" className="text-danger">
-											{error.email}
-										</Form.Text>
-									)} */}
 								</Form.Group>
 
 								<Form.Group className="mb-3" controlId="formBasicPassword">
@@ -86,11 +78,6 @@ const Signup = () => {
 										placeholder="Password"
 										required
 									/>
-									{/* {error.password && (
-										<Form.Text id="formName" className="text-danger">
-											{error.password}
-										</Form.Text>
-									)} */}
 								</Form.Group>
 								<Form.Group className="mb-3" controlId="formBasicCheckbox">
 									<Form.Check type="checkbox" label="Remember me" />
