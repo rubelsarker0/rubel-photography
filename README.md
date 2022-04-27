@@ -23,7 +23,7 @@ _My mission is very clear - I want to provide the highest standard and best qual
 
 > Clone the application from github using this link:
 
-- [x] https://github.com/programming-hero-web-course-4/independent-service-provider-rubelsarker0
+- [x] https://github.com/rubelsarker0/rubel-photography
 
 # Site live url:
 
